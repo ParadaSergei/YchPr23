@@ -8,6 +8,6 @@ namespace DatabaseYchPractic.DbEntity
 {
     public class DbStorage
     {
-        public static PoliceDBEntities Db { get; set; } = new PoliceDBEntities();
+        public static CommunSalonDBEntities Db { get; set; } = new CommunSalonDBEntities();
     }
 }

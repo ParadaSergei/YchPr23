@@ -69,7 +69,7 @@ namespace DatabaseYchPractic.ViewModel
 
             if (await Authorization(Login, Password))
             {
-                var infoWindow = new MainInform(_user);
+                var infoWindow = new WindowTableInform();
                 infoWindow.Show();
 
                 foreach (var item in App.Current.Windows)
@@ -79,10 +79,10 @@ namespace DatabaseYchPractic.ViewModel
                         (item as Window)?.Hide();
                     }
                 }
-                ButtonDes = "Войти";
+                ButtonDes = "Подождите";
                 return;
             }
-            MessageBox.Show("Неверный логин или пароль", "Фвторизация!", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Неверный логин или пароль", "Авторизация!", MessageBoxButton.OK, MessageBoxImage.Error);
             ButtonDes = "Войти";
         }
     }

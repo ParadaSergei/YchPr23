@@ -12,16 +12,20 @@ namespace DatabaseYchPractic.DbEntity
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Item
     {
-        public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string EMAIL { get; set; }
-        public Nullable<int> Id_info { get; set; }
-        public Nullable<int> id_item { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Item()
+        {
+            this.User = new HashSet<User>();
+        }
     
-        public virtual Item Item { get; set; }
-        public virtual UserInform UserInform { get; set; }
+        public int Id_item { get; set; }
+        public string Name { get; set; }
+        public Nullable<decimal> Price { get; set; }
+        public Nullable<int> Amount { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> User { get; set; }
     }
 }

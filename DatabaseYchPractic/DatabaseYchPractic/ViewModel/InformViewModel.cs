@@ -47,7 +47,7 @@ namespace DatabaseYchPractic.ViewModel
         {
             Firstname = user.UserInform.FirstName;
             Lastname = user.UserInform.LastName;
-            Age = user.UserInform.Age;
+            Age = (int)user.UserInform.Age;
         }
     }
 }

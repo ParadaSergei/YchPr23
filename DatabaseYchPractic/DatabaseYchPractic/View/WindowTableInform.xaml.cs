@@ -16,15 +16,19 @@ using System.Windows.Shapes;
 
 namespace DatabaseYchPractic.View
 {
-    /// <summary>
-    /// Логика взаимодействия для MainInform.xaml
-    /// </summary>
-    public partial class MainInform : Window
+    public partial class WindowTableInform : Window
     {
-        public MainInform(User user)
+        private User _user;
+        public WindowTableInform()
         {
             InitializeComponent();
-            DataContext = new InformViewModel(user);
+            this.DataContext = new TableInfoViewModel();
+        }
+
+        private void infoUser_Click(object sender, RoutedEventArgs e)
+        {
+           MainInform mainInform = new MainInform(_user);
+           mainInform.Show();
         }
     }
 }

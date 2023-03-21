@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dbentity/policedbentity.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dbentity/policedbentity.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dbentity/communsalondbmodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dbentity/communsalondbmodel.tt")]
 
 

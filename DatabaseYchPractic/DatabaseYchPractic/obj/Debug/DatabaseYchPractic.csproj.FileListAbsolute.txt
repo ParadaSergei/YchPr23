@@ -22,3 +22,6 @@ E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\
 E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\DatabaseYchPractic.csproj.CopyComplete
 E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\DatabaseYchPractic.exe
 E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\DatabaseYchPractic.pdb
+E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\View\WindowTableInform.g.cs
+E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\View\WindowTableInform.baml
+E:\УчебнаяПрактика2023\DatabaseYchPractic\DatabaseYchPractic\obj\Debug\App.baml

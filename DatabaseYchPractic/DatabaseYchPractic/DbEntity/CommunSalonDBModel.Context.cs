@@ -13,10 +13,10 @@ namespace DatabaseYchPractic.DbEntity
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PoliceDBEntities : DbContext
+    public partial class CommunSalonDBEntities : DbContext
     {
-        public PoliceDBEntities()
-            : base("name=PoliceDBEntities")
+        public CommunSalonDBEntities()
+            : base("name=CommunSalonDBEntities")
         {
         }
     
@@ -25,6 +25,7 @@ namespace DatabaseYchPractic.DbEntity
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Item> Item { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserInform> UserInform { get; set; }
     }

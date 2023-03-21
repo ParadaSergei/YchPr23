@@ -20,10 +20,10 @@ namespace DatabaseYchPractic.DbEntity
             this.User = new HashSet<User>();
         }
     
-        public int Id { get; set; }
+        public int Id_info { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Age { get; set; }
+        public Nullable<int> Age { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<User> User { get; set; }
