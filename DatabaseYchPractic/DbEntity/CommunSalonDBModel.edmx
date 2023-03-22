@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище CommunSalonDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id_item" />
+          </Key>
+          <Property Name="Id_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Amount" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="Id_info" Type="int" />
+          <Property Name="id_item" Type="int" />
+        </EntityType>
+        <EntityType Name="UserInform">
+          <Key>
+            <PropertyRef Name="Id_info" />
+          </Key>
+          <Property Name="Id_info" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Age" Type="int" />
+        </EntityType>
+        <Association Name="FK__User__Id_info__3A81B327">
+          <End Role="UserInform" Type="Self.UserInform" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInform">
+              <PropertyRef Name="Id_info" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Id_info" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User__id_item__3B75D760">
+          <End Role="Item" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id_item" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="id_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище CommunSalonDBModelContainer">
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInform" EntityType="Self.UserInform" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__User__Id_info__3A81B327" Association="Self.FK__User__Id_info__3A81B327">
+            <End Role="UserInform" EntitySet="UserInform" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User__id_item__3B75D760" Association="Self.FK__User__id_item__3B75D760">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CommunSalonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id_item" />
+          </Key>
+          <Property Name="Id_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Amount" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK__User__id_item__3B75D760" FromRole="Item" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Id_info" Type="Int32" />
+          <Property Name="id_item" Type="Int32" />
+          <NavigationProperty Name="Item" Relationship="Self.FK__User__id_item__3B75D760" FromRole="User" ToRole="Item" />
+          <NavigationProperty Name="UserInform" Relationship="Self.FK__User__Id_info__3A81B327" FromRole="User" ToRole="UserInform" />
+        </EntityType>
+        <EntityType Name="UserInform">
+          <Key>
+            <PropertyRef Name="Id_info" />
+          </Key>
+          <Property Name="Id_info" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK__User__Id_info__3A81B327" FromRole="UserInform" ToRole="User" />
+        </EntityType>
+        <Association Name="FK__User__id_item__3B75D760">
+          <End Role="Item" Type="Self.Item" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id_item" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="id_item" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User__Id_info__3A81B327">
+          <End Role="UserInform" Type="Self.UserInform" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInform">
+              <PropertyRef Name="Id_info" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Id_info" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CommunSalonDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Item" EntityType="Self.Item" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="UserInform" EntityType="Self.UserInform" />
+          <AssociationSet Name="FK__User__id_item__3B75D760" Association="Self.FK__User__id_item__3B75D760">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User__Id_info__3A81B327" Association="Self.FK__User__Id_info__3A81B327">
+            <End Role="UserInform" EntitySet="UserInform" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CommunSalonDBModelContainer" CdmEntityContainer="CommunSalonDB">
+          <EntitySetMapping Name="Item">
+            <EntityTypeMapping TypeName="CommunSalonDBModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="Id_item" ColumnName="Id_item" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="CommunSalonDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="Id_info" ColumnName="Id_info" />
+                <ScalarProperty Name="id_item" ColumnName="id_item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInform">
+            <EntityTypeMapping TypeName="CommunSalonDBModel.UserInform">
+              <MappingFragment StoreEntitySet="UserInform">
+                <ScalarProperty Name="Id_info" ColumnName="Id_info" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
