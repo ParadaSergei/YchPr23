@@ -1,0 +1,5 @@
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\TestProgrammbleMachine\obj\Debug\net6.0\TestProgrammbleMachine.csproj.AssemblyReference.cache
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\TestProgrammbleMachine\obj\Debug\net6.0\TestProgrammbleMachine.GeneratedMSBuildEditorConfig.editorconfig
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\TestProgrammbleMachine\obj\Debug\net6.0\TestProgrammbleMachine.AssemblyInfoInputs.cache
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\TestProgrammbleMachine\obj\Debug\net6.0\TestProgrammbleMachine.AssemblyInfo.cs
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\TestProgrammbleMachine\obj\Debug\net6.0\TestProgrammbleMachine.csproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\bin\Debug\net6.0\SF2022User{NN}Lib.deps.json
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\bin\Debug\net6.0\SF2022User{NN}Lib.dll
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\bin\Debug\net6.0\SF2022User{NN}Lib.pdb
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.csproj.AssemblyReference.cache
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.GeneratedMSBuildEditorConfig.editorconfig
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.AssemblyInfoInputs.cache
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.AssemblyInfo.cs
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.csproj.CoreCompileInputs.cache
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.dll
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\refint\SF2022User{NN}Lib.dll
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\SF2022User{NN}Lib.pdb
+D:\IS32\ConsolesParada\my\YchPr23-CommunSalon\YchPr23-CommunSalon\DatabaseYchPractic\SF2022User{NN}Lib\obj\Debug\net6.0\ref\SF2022User{NN}Lib.dll

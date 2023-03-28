@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CommunSalonDBModelContainer" CdmEntityContainer="CommunSalonDB">
+    <EntitySetMapping Name="Item">
+      <EntityTypeMapping TypeName="CommunSalonDBModel.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="Id_item" ColumnName="Id_item" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="CommunSalonDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="Id_info" ColumnName="Id_info" />
+          <ScalarProperty Name="id_item" ColumnName="id_item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInform">
+      <EntityTypeMapping TypeName="CommunSalonDBModel.UserInform">
+        <MappingFragment StoreEntitySet="UserInform">
+          <ScalarProperty Name="Id_info" ColumnName="Id_info" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

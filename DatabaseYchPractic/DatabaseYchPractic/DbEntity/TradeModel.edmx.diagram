@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="05a7f059cdd74e0fa669d8e650630661" Name="Diagram1">
+        <EntityTypeShape EntityType="tradeModel.InformationEndOrder" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.Order" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.PointOfIssue" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.Product" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.StatysProduct" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.User" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="tradeModel.UserData" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="tradeModel.FK__Order__Id_Inform__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.FK__Order__Id_Fio__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.FK__Order__Id_PointO__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.FK_Order_StatysProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.FK__User__Id_Role__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.FK__User__Id_Fio__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="tradeModel.OrderProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

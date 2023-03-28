@@ -1,0 +1,51 @@
+﻿<Window x:Class="DatabaseYchPractic.View.VisitorWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatabaseYchPractic.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Режим гостя" Height="450" Width="800">
+    <Border BorderBrush="Black" BorderThickness="4" CornerRadius="20">
+        <Grid  Margin="5" Background="#76e383" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <DataGrid
+            Background="#76e383"
+            Grid.Row="0"
+            Grid.Column="0"
+            IsReadOnly="True"
+            SelectedItem="{Binding SelectProduct}"
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Products}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Наименование"
+                    Binding="{Binding Name}"
+                    />
+                <DataGridTextColumn
+                    Header="Описание товара"
+                    Binding="{Binding Description}" />
+                <DataGridTextColumn
+                    Header="Стоимость"
+                    Binding="{Binding Cost}" />
+                <DataGridTextColumn
+                    Header="Стоимость скидки"
+                    Binding="{Binding DiscountAmount}" />
+            </DataGrid.Columns>
+        </DataGrid>
+            <Button          
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="10"
+            Width="80"
+            HorizontalAlignment="Left"
+            Content="Вернутся"
+            Click="backAutorized_Click"
+            />
+        </Grid>
+    </Border>
+</Window>

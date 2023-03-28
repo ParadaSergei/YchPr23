@@ -1,0 +1,108 @@
+﻿<Window x:Class="DatabaseYchPractic.View.WindowTableInform"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatabaseYchPractic.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Информативное окно" Height="450" Width="800">
+    <Grid Background="#cffaeb">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="650"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <DataGrid
+            Grid.Row="0"
+            Grid.Column="0"
+            IsReadOnly="True"
+            SelectedItem="{Binding SelectProduct}"
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Products}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Наименование"
+                    Binding="{Binding Name}"
+                    />
+                <DataGridTextColumn
+                    Header="Описание товара"
+                    Binding="{Binding Description}" />
+                <DataGridTextColumn
+                    Header="Мануфактура"
+                    Binding="{Binding Manufacturer}" />
+                <DataGridTextColumn
+                    Header="Стоимость"
+                    Binding="{Binding Cost}" />
+                <DataGridTextColumn
+                    Header="Стоимость скидки"
+                    Binding="{Binding DiscountAmount}" />
+                <DataGridTextColumn
+                    Header="Количество в наличии"
+                    Binding="{Binding QuantityInStock}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button 
+
+            Grid.Column="1"
+            Grid.Row="0"
+            Name="AddBut"
+            Visibility="Hidden"
+            Margin="20,20,5,10"
+            VerticalAlignment="Top"
+            Content="Добавить"
+            Click="InsertInfoUser_Click"
+            />
+        <Button 
+            Grid.Column="1"
+            Grid.Row="0"
+            Name="EditBut"
+            Visibility="Hidden"
+            Margin="20,50,5,10"
+            VerticalAlignment="Top"
+            Content="Редатировать"
+            Click="EditInfoUser_Click"
+            />
+        <Button 
+            Grid.Column="1"
+            Grid.Row="0"
+            Name="DeleteBut"
+            Visibility="Hidden"
+            Margin="20,80,5,10"
+            VerticalAlignment="Top"
+            Content="Удалить"
+            Click="DeleteInfoUser_Click"
+            />
+        <Button 
+            Grid.Column="1"
+            Grid.Row="0"
+            Margin="20,110,5,10"
+            VerticalAlignment="Bottom"
+            Content="Перезагрузить"
+            Click="ReloadButton_Click"
+            />
+       
+
+        <Button          
+            Grid.Column="1"
+            Visibility="Hidden"
+            Grid.Row="1"          
+            Name="DataAccountBut"
+            Margin="20,20,5,10"
+            Content="Данные аккаунта"
+            Click="infoUser_Click"
+            />
+        <Button          
+            Grid.Column="0"
+            Grid.Row="1"
+            Margin="10"
+            Width="80"
+            HorizontalAlignment="Left"
+            Content="Вернутся"
+            Click="backAutoriz_Click"
+            />
+    </Grid>
+</Window>
